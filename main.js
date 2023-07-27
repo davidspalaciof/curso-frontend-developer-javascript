@@ -2,7 +2,7 @@ const menuEmail = document.querySelector('.navbar-email');
 const desktopMenu = document.querySelector('.desktop-menu');
 const menuBurguer = document.querySelector('.menu');
 const menuCartIcon = document.querySelector('.navbar-shopping-cart');
-const aside = document.querySelector('.product-detail');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const mobileMenu = document.querySelector('.mobile-menu');
 const cardsContainer = document.querySelector('.cards-container');
 
@@ -12,20 +12,20 @@ menuBurguer.addEventListener('click', toggleMenuBurguer);
 
 menuCartIcon.addEventListener('click', toggleMenuCartIcon);
 
-function toggleMenuEmail () {
-  aside.classList.add('inactive');
+function toggleMenuEmail () {  
+  shoppingCartContainer.classList.add('inactive');
   desktopMenu.classList.toggle('inactive');
 }
 
 function toggleMenuBurguer () {
-  aside.classList.add('inactive');
+  shoppingCartContainer.classList.add('inactive');
   mobileMenu.classList.toggle('inactive');
 }
 
 function toggleMenuCartIcon () {
   desktopMenu.classList.add('inactive');
   mobileMenu.classList.add('inactive');
-  aside.classList.toggle('inactive');
+  shoppingCartContainer.classList.toggle('inactive');
 }
 
 const productList = [];
